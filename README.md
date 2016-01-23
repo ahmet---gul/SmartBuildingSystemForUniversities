@@ -1,7 +1,7 @@
 # SmartBuildingSystemForUniversities
 Software Engineering Course Term Project
 
-Owners of the project are Ahmet GÜL , Onurhan ÇELİK , Tuğba KARABULUT and GÖKCAN ÜSTÜN.
+Owners of the project are Ahmet GÜL , Onurhan ÇELİK , Tuğba KARABULUT and Gökcan ÜSTÜN.
 
 This is software engineering lesson term project.
 Waterfall model is used in this project and implementation only covers main uses cases and user interfaces.
