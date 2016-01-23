@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="SBSU_DEMO" namespace="SBSU_DEMO.classes" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="_User" table="_User" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <property name="Name" column="NAME"/>
+    <property name="Surname" column="SURNAME"/>
+    <property name="PhoneNumber" column="PHONENUMBER"/>
+    <property name="FingerPrint" column="FINGERPRINT"/>
+    <property name="Email" column="EMAIL"/>
+    <property name="Password" column="PASSWORDD"/>
+    <property name="UserType" column="TYPEE"/>
+    <property name="StudentID" column="STUDENT_ID"/>
+    <property name="LectID" column="LECT_ID"/>
+    <property name="TechID" column="TECH_ID"/>
+  </class>
+</hibernate-mapping>

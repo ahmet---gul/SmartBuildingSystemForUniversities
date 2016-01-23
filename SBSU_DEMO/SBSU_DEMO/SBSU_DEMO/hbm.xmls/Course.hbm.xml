@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="SBSU_DEMO" namespace="SBSU_DEMO.classes" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Course" table="COURSE" lazy="true" >
+    <id name="CourseId" column="COURSEID">
+      <generator class="identity" />
+    </id>
+    <property name="CourseName" column="COURSENAME"/>
+    <property name="CourseDatetime" column="COURSEDATETIME"/>
+    <many-to-one class="Lecturer" name="CourseLecturer" column="COURSE_LECTURERID"/>
+    <bag name="AttendanceList">
+      <key column="COURSE_ID" />
+      <one-to-many class="CourseAttendance" />
+    </bag>
+    <bag name="StudentList" table="STUDENT_X_COURSE">
+      <key column="COURSE_ID" />
+      <many-to-many class="Student" column="STUDENT_ID"/>
+    </bag>
+  </class>
+</hibernate-mapping>

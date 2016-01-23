@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="SBSU_DEMO" namespace="SBSU_DEMO.classes" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Attendance" table="ATTENDANCE" lazy="true" >
+    <id name="Id" column="ID">
+      <generator class="identity" />
+    </id>
+    <many-to-one class="CourseAttendance" name="Course_Attendance" column="COURSE_ATTENDANCEID"/>
+    <many-to-one class="Student" name="student" column="STUDENT_ID"/>
+    <property name="Flag" column="FLAG"/> 
+  </class>
+</hibernate-mapping>

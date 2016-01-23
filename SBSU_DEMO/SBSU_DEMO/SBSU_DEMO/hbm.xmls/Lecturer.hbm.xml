@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="SBSU_DEMO" namespace="SBSU_DEMO.classes" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Lecturer" table="LECTURER" lazy="true" >
+    <id name="LecturerId" column="LECTURERID">
+      <generator class="identity" />
+    </id>
+    <property name="Name" column="NAME"/>
+    <property name="Surname" column="SURNAME"/>
+    <property name="PhoneNumber" column="PHONENUMBER"/>
+    <property name="FingerPrint" column="FINGERPRINT"/>
+    <property name="Email" column="EMAIL"/>
+    <property name="Password" column="PASSWORDD"/>
+    <bag name="Course_List">
+      <key column="COURSE_LECTURERID" />
+      <one-to-many class="Course" />
+    </bag>
+  </class>
+</hibernate-mapping>
